@@ -1,6 +1,6 @@
 #include "model.h"
 
-model::model(QObject *parent) : QObject(parent)
+Model::Model(QObject *parent) : QObject(parent)
 {
 
 }

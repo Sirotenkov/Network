@@ -3,11 +3,12 @@
 
 #include <QObject>
 
-class viewmodel : public QObject
+class ViewModel : public QObject
 {
     Q_OBJECT
+
 public:
-    explicit viewmodel(QObject *parent = nullptr);
+    explicit ViewModel(QObject *parent = nullptr);
 
 signals:
 

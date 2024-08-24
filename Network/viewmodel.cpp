@@ -1,6 +1,6 @@
 #include "viewmodel.h"
 
-viewmodel::viewmodel(QObject *parent) : QObject(parent)
+ViewModel::ViewModel(QObject *parent) : QObject(parent)
 {
 
 }
