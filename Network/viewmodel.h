@@ -11,6 +11,9 @@ class ViewModel : public QObject
 {
     Q_OBJECT
 
+public:
+    explicit ViewModel(Model* model, QObject *parent = nullptr);
+
     Q_PROPERTY(QDateTime currentDateTime READ currentDateTime NOTIFY currentweatherUpdated)
 
     Q_PROPERTY(double temp READ temp NOTIFY currentweatherUpdated)
@@ -20,9 +23,6 @@ class ViewModel : public QObject
     Q_PROPERTY(QString tempUnits READ tempUnits NOTIFY currentweatherUpdated)
     Q_PROPERTY(QString windSpeedUnits READ windSpeedUnits NOTIFY currentweatherUpdated)
     Q_PROPERTY(QString humidityUnits READ humidityUnits NOTIFY currentweatherUpdated)
-
-public:
-    explicit ViewModel(Model* model, QObject *parent = nullptr);
 
     QDateTime currentDateTime() const;
 
@@ -45,7 +45,7 @@ private:
     QTimer m_timer;
 
     // INFO: Интервал обновления данных с сайта
-    int m_interval = 1 * 60 * 1000;
+    int m_interval = 60 * 60 * 1000;
 
     QString m_tempUnits;
     QString m_windSpeedUnits;

@@ -25,8 +25,8 @@ void Model::updateCurrentweather()
     qDebug() << "Access the weather API";
 
     QUrlQuery query;
-    query.addQueryItem("latitude", "35,6895");     // Для примера выбран город Токио
-    query.addQueryItem("longitude", "139,6917");   //
+    query.addQueryItem("latitude", "35.6895");     // Для примера выбран город Токио
+    query.addQueryItem("longitude", "139.6917");   //
     query.addQueryItem("current", "temperature_2m,relative_humidity_2m,wind_speed_10m");
     query.addQueryItem("hourly", "temperature_2m,relative_humidity_2m,wind_speed_10m");
 

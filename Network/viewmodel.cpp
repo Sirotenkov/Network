@@ -13,8 +13,7 @@ ViewModel::ViewModel(Model* model, QObject *parent) : QObject(parent), m_model(m
 QDateTime ViewModel::currentDateTime() const
 {
     auto const currentweather = m_model->currentweather();
-    return !currentweather.isEmpty() ? currentweather.front().currentDateTime
-                : QDateTime::currentDateTimeUtc();
+    return !currentweather.isEmpty() ? currentweather.front().currentDateTime : QDateTime::currentDateTimeUtc();
 }
 
 double ViewModel::temp() const
