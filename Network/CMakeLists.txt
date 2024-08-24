@@ -34,6 +34,8 @@ if(ANDROID)
 else()
     add_executable(Network
       main.cpp
+      model.cpp
+      viewmodel.cpp
       qml.qrc
     )
 endif()
